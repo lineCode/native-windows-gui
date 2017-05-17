@@ -10,7 +10,7 @@ use nwg::constants::{FONT_WEIGHT_BLACK, FONT_DECO_ITALIC, CheckState, FileDialog
 nwg_template!(
     head: setup_ui<&'static str>,
     controls: [
-        ("MainWindow", nwg_window!(title="Nwg Showcase"; position=(100, 100); size=(500, 400))),
+        ("MainWindow", nwg_window!(title="Nwg Showcase"; position=(100, 100); size=(500, 400); resizable=true)),
         ("FileMenu", nwg_menu!(parent="MainWindow"; text="&File")),
         ("TestSubmenu1", nwg_menu!(parent="FileMenu"; text="&Submenu")),
         ("TestDisabledSubmenu", nwg_menu!(parent="FileMenu"; text="Disabled Submenu"; disabled=true)),

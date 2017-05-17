@@ -44,7 +44,7 @@ use events::Event;
     • `size`: The start size of the textinput  
     • `visible`: If the textinput should be visible to the user   
     • `disabled`: If the user can or can't click on the textinput  
-    • `readonly`: If the user can copty the text but can't edit the textinput content  
+    • `readonly`: If the user can copy the text but can't edit the textinput content  
     • `password`: If the textinput should hide its content  
     • `placeholder`: Some text that is displayed when the actual value is empty  
     • `limit`: The maximum number of characters that the control can hold  

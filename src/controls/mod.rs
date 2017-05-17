@@ -33,7 +33,8 @@ pub mod progress_bar;
 pub mod datepicker;
 pub mod file_dialog;
 pub mod timer;
-pub mod canvas;
+
+#[cfg(feature = "canvas")] pub mod canvas;
 
 use std::any::TypeId;
 use std::hash::Hash;
@@ -54,8 +55,10 @@ pub use controls::groupbox::{GroupBoxT, GroupBox};
 pub use controls::progress_bar::{ProgressBarT, ProgressBar};
 pub use controls::file_dialog::{FileDialogT, FileDialog};
 pub use controls::timer::{TimerT, Timer};
-pub use controls::canvas::{CanvasT, Canvas, CanvasRenderer};
 pub use controls::datepicker::{DatePickerT, DatePicker};
+
+#[cfg(feature = "canvas")] pub use controls::canvas::{CanvasT, Canvas, CanvasRenderer};
+
 use ui::Ui;
 use events::Event;
 use error::Error;

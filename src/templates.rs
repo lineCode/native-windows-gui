@@ -83,7 +83,7 @@ macro_rules! nwg_get_mut {
 
     Usage: 
 
-    ```rust  
+    ```rust,ignore
         nwg_template!(
             head: setup_ui<&'static str>,
             controls: [ ("TEST", Control), ("TEST2", Control) ],
@@ -707,6 +707,8 @@ macro_rules! nwg_filedialog {
     }}
 }
 
+
+
 /**
     Sane defaults for the Canvas control. Requires a parent.
 
@@ -721,6 +723,7 @@ macro_rules! nwg_filedialog {
     `nwg_canvas!(parent="MyParent"; visible=false; size=(10, 10))`  
     `nwg_canvas!(parent="MyParent"; \* Any combinations of the template properties*\)`    
 */
+#[cfg(feature = "canvas")]
 #[macro_export]
 macro_rules! nwg_canvas {
     (parent=$p:expr; $( $i:ident=$v:expr );* ) => { {
